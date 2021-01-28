@@ -1,0 +1,125 @@
+<report
+        id="report_cnss_simplifiee"
+        model="hr.payslip.run"
+        string="ETAT C.N.S.S SIMPLIFIEE"
+        report_type="qweb-pdf"
+		name="tech_reports_payroll.simplifiee"
+		print_report_name="'ETAT C.N.S.S SIMPLIFIEE'"/>
+
+        <template id="simplifiee">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+            <t t-call="web.external_layout">
+
+            <style>
+                table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                }
+                th, td {
+                padding: 1px;
+                text-align: left;    
+                }
+                mark {
+                background-color: #e8e6e6;
+                color: black;
+                }
+                div.shadow {
+                border: 1px solid black;
+                box-shadow: 10px 5px 5px black;
+                margin-left:auto; 
+                margin-right:auto;
+                
+                }
+
+                
+                div.s {
+                width: 60%;
+                border: 1px solid;
+                box-shadow: 1px 3px #888888;
+                }
+                div.n{
+                text-align:center;
+                vertical-align:center;
+                margin-left:auto; 
+                margin-right:auto;
+                }
+                td.doted {
+                    border: 1px black;
+                    border-style: dotted;
+                }
+                th.doted {
+                border: 1px black;
+                border-style: dotted;
+                }
+                table.doted {
+                
+                border-style: dotted;
+                border: 1px black;
+                }
+
+                </style>
+
+                <div style="position:absolute;left:698px;top:5.98px">
+                    <strong><span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y/%m/%d')"/></strong>
+                </div>
+                
+                <div class="n" style="position:absolute;left:400px;top:100.98px">
+                    Periode du : 01/2020
+                </div>
+                
+                <div style="position:absolute;top:5.98px">
+                    <strong>PETROM</strong>
+                    <br><strong>7 LOT. LA COLLINE 2 SIDI MAARO</strong></br>
+                    <br><strong>1953901</strong></br>
+                </div>
+
+                <div class="n s" style="position:absolute;left:200px;top:60.98px">
+                    <strong><h4> Etat C.N.S.S Simplifiée </h4></strong>
+                </div>
+
+                
+
+                <table  style="position:absolute;left:0px;top:210.98px" class="doted" width="99%">
+                <thead>
+                    <tr>
+                        <th class="doted">CNSS</th>
+                        <th class="doted" style="text-align: center">Mle</th>
+                        <th class="doted" style="text-align: center">Nom Prenom</th>
+                        <th class="doted" style="text-align: center">NBJ</th>
+                        <th class="doted" style="text-align: center">Sal</th>
+                        <th class="doted" style="text-align: center">Sal. Plaf</th>
+                        <th class="doted" style="text-align: center">Cot. Sal</th>
+                        <th class="doted" style="text-align: center">Cot. Pat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td  class="doted" style="text-align:center" ></td>
+                        <td  class="doted" style="text-align:center" ></td>
+                        <td  class="doted" style="text-align:center" ></td>
+                        <td  class="doted" style="text-align:center" ></td>
+                        <td  class="doted" style="text-align:center" ></td>
+                        <td  class="doted" style="text-align:center" ></td>
+                        <td  class="doted" style="text-align:center" ></td>
+                        
+                    </tr>
+                    <tr>
+                        <th class="doted" colspan="3" style="text-align: right;padding:2px; margin:2px">TOTAL (HT) :</th>
+                        <td  class="doted" ></td>
+                        <td  class="doted" ></td>
+                        <td  class="doted" ></td>
+                        <td  class="doted" ></td>
+                        <td  class="doted" ></td>
+                    </tr>
+                    
+                </tbody>
+
+            </table>
+
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>
